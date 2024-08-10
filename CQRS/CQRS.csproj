@@ -8,9 +8,6 @@
 
   <ItemGroup>
     <Folder Include="CQRSDesignPattern\Queries\" />
-    <Folder Include="CQRSDesignPattern\Results\" />
-    <Folder Include="CQRSDesignPattern\Handlers\" />
-    <Folder Include="CQRSDesignPattern\Commands\" />
   </ItemGroup>
 
   <ItemGroup>
