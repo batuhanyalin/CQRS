@@ -3,11 +3,11 @@ using CQRS.DAL.Context;
 
 namespace CQRS.CQRSDesignPattern.Handlers.CategoryHandlers
 {
-    public class RemoveCategoryQueryHandler
+    public class RemoveCategoryCommandHandler
     {
        private readonly CQRSContext _context;
 
-        public RemoveCategoryQueryHandler(CQRSContext context)
+        public RemoveCategoryCommandHandler(CQRSContext context)
         {
             _context = context;
         }

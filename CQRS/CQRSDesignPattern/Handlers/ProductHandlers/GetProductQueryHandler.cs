@@ -1,5 +1,6 @@
 ﻿using CQRS.CQRSDesignPattern.Results.ProductResults;
 using CQRS.DAL.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CQRS.CQRSDesignPattern.Handlers.ProductHandlers

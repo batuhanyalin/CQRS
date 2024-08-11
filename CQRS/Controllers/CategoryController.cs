@@ -11,10 +11,10 @@ namespace CQRS.Controllers
         private readonly GetCategoryQueryHandler _getCategoryQueryHandler;
         private readonly GetCategoryByIdQueryHandler _getCategoryByIdQueryHandler;
         private readonly CreateCategoryCommandHandler _createCategoryCommandHandler;
-        private readonly RemoveCategoryQueryHandler _removeCategoryCommandHandler;
+        private readonly RemoveCategoryCommandHandler _removeCategoryCommandHandler;
         private readonly UpdateCategoryCommandHandler _updateCategoryCommandHandler;
 
-        public CategoryController(GetCategoryQueryHandler getCategoryQueryHandler, CreateCategoryCommandHandler createCategoryCommandHandler, RemoveCategoryQueryHandler removeCategoryCommandHandler, UpdateCategoryCommandHandler updateCategoryCommandHandler, GetCategoryByIdQueryHandler getCategoryByIdQueryHandler)
+        public CategoryController(GetCategoryQueryHandler getCategoryQueryHandler, CreateCategoryCommandHandler createCategoryCommandHandler, RemoveCategoryCommandHandler removeCategoryCommandHandler, UpdateCategoryCommandHandler updateCategoryCommandHandler, GetCategoryByIdQueryHandler getCategoryByIdQueryHandler)
         {
             _getCategoryQueryHandler = getCategoryQueryHandler;
             _createCategoryCommandHandler = createCategoryCommandHandler;

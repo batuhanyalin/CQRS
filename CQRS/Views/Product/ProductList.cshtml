@@ -1,0 +1,44 @@
+﻿@model List<GetProductQueryResult>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <div class="alert alert-primary">
+        Ürün Listesi
+    </div>
+    <br />
+    <a href="/Product/CreateProduct/" class="btn btn-info">Yeni Ürün Girişi</a>
+    <br />
+    <br />
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Açıklama</th>
+            <th>Fotoğraf Url</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>@item.Description</td>
+                <td><img src="@item.ImageUrl" style="height:150px;width:200px" /></td>
+                <td>@item.CategoryId</td>
+                <td>@item.Stock</td>
+                <td>@item.Price</td>
+                <td><a href="/Product/RemoveProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Product/UpdateProduct/@item.ProductId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
