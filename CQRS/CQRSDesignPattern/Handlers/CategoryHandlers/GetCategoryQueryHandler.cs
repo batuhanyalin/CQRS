@@ -4,7 +4,8 @@ using CQRS.DAL.Context;
 namespace CQRS.CQRSDesignPattern.Handlers.CategoryHandlers
 {
     public class GetCategoryQueryHandler
-    {private readonly CQRSContext _context;
+    {
+        private readonly CQRSContext _context;
 
         public GetCategoryQueryHandler(CQRSContext context)
         {
@@ -15,6 +16,7 @@ namespace CQRS.CQRSDesignPattern.Handlers.CategoryHandlers
             var values = _context.Categories.Select(x => new GetCategoryQueryResult
             {
                 CategoryId = x.CategoryId,
+                CategoryName = x.CategoryName,
             });
             return values.ToList();
         }
